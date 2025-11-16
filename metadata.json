@@ -1,0 +1,5 @@
+{
+  "name": "Vibe News Cards",
+  "description": "An AI-powered news aggregation app with a neobrutalist theme. It curates and summarizes real-time news from Google, tailored to your selected topics and location, and presents them as interactive, visually engaging flashcards.",
+  "requestFramePermissions": []
+}
