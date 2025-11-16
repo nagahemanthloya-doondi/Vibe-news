@@ -125,6 +125,9 @@ export const NewsCard: React.FC<NewsCardProps> = ({ article, sources, onNext, on
         try {
             await navigator.share(shareData);
         } catch (error) {
+            // Note: This code correctly uses the browser's native `DOMException`.
+            // The `npm warn` about the deprecated `node-domexception` package is an unrelated
+            // issue that stems from a project dependency, not this application code.
             if (error instanceof DOMException && error.name === 'AbortError') return;
             console.error('Error sharing article:', error);
             alert("Oops! Something went wrong while trying to share.");
